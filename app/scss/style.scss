@@ -4,6 +4,14 @@
 @import 'global';
 
 .header {
+    background-image: url('../images/bg/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header-top,
+.header-bottom {
     background-color: $title;
     opacity: 0.8;
 }
@@ -70,10 +78,6 @@
 
 .header-content {
     
-    background-image: url('../images/bg/main-bg.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
     &__inner {
         display: flex;
         flex-direction: column;
@@ -161,12 +165,55 @@
         color: $title;
         @extend %mont-500;
     }
-    /* &__item{
-        margin-bottom: 50px;
-    } */
-    /* &__item + .about__item {
-        margin-left: 120px;
-    } */
+}
+
+.advantages {
+    background-color: $title;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        @extend %mont-700;
+        margin-bottom: 10px;
+    }
+    &__descr {
+        max-width: 350px;
+        padding-left: 60px;
+        height: 75px;
+        margin-bottom: 60px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            left: 0;
+            top: 5px;
+        }
+    }
+    &__guarantee::before {
+        background-image: (url('../images/icons/guarantee-icon.svg'));
+    }
+    &__pay::before {
+        background-image: (url('../images/icons/pay-icon.svg'));
+    }
+    &__cycle::before {
+        background-image: (url('../images/icons/cycle-icon.svg'));
+    }
+    &__quality::before {
+        background-image: (url('../images/icons/quality-icon.svg'));
+    }
+    &__speed::before {
+        background-image: (url('../images/icons/speed-icon.svg'));
+    }
+    &__tools::before {
+        background-image: (url('../images/icons/tools-icon.svg'));
+    }
 }
 
 
