@@ -28,6 +28,19 @@ body {
   }
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  &__link + .social__link {
+    margin-left: 10px;
+  }
+  &__link:hover {
+       path {
+            transition: all 0.5s;
+            fill: #0976b4;
+        } 
+  }
+}
 
 .mark {
   color: $accent;
@@ -35,4 +48,12 @@ body {
 
 section {
   padding: 145px 0;
+}
+
+.title {
+  font-size: 40px;
+  @extend %mont-700;
+  color: $title;
+  line-height: 42px;
+  text-align: center;
 }
