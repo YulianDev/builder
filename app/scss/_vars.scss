@@ -21,3 +21,14 @@ $accent: #0ac77599;
     font-family: 'Poppins-Regular', sans-serif;
     font-weight: 400;
 }
+%btn {
+    color: $title;
+    border: 2px solid $accent;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %mont-700;
+    cursor: pointer;
+}

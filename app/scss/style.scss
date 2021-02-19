@@ -2,6 +2,10 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
+@import 'tools';
+@import 'animation';
+
 
 .header {
     background-image: url('../images/bg/main-bg.jpg');
@@ -210,16 +214,7 @@
         align-items: center;
     }
     &__link {
-        color: $title;
-        border: 2px solid $accent;
-        width: 200px;
-        height: 60px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        @extend %mont-700;
-        cursor: pointer;
-
+        @extend %btn;
         position: relative;
         overflow: hidden;
         transition: all 1s;
@@ -304,6 +299,11 @@
 }
 .reasons {
     background-color: #F8F8F8;
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+    }
     &__info {
         max-width: 600px;
         width: 100%;
@@ -327,7 +327,127 @@
             background-image: url('../images/icons/mark-icon.svg')
         }
     }
+    &__slider-list {
+        max-width: 500px;
+        max-height: 500px;
+        &:hover .slick-arrow {
+            opacity: 1;
+        }
+        &:active {
+            cursor: grab;
+        }
+        
+    }
+    &__slider-img {
+        max-width: 440px;
+        max-height: 330px;
+        margin: 0 auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    &__link {
+        margin: 50px auto 0;
+    }
 }
+
+.services {
+    &__inner {
+        position: relative;
+    }
+    &__img {
+        position: absolute;
+        max-height: 500px;
+        top: 40px;
+        right: 105px;
+    }
+    &__list {
+        max-width: 700px;
+    }
+    &__title {
+        margin-bottom: 85px;
+    }
+    &__item {
+        margin-bottom: 25px;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__item-box {
+        padding-left: 30px;
+        max-width: 300px;
+        width: 100%;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 17px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-image: url('../images/icons/mark-icon-2.svg')  
+        }
+    }
+    &__link {
+        color: $title;
+        transition: all .5s;
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+.price {
+    background-color: #F8F8F8;
+    &__title {
+       margin-bottom: 85px;
+    }
+    &__categories-box {
+        margin-bottom: 50px;
+    }
+    &__item-title {
+        color: $title;
+        @extend %mont-500;
+        padding:0 0 10px 20px;
+    }
+    &__list {
+        color: $title;
+        font-size: 14px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: calc(100% / 2);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 5px 20px;
+        transition: all .4s;
+        position: relative;
+        cursor: default;
+        
+        &:hover {
+            color: $accent;
+            &::after {
+                animation: riseVawe 1s forwards;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $accent;
+            height: 1px;
+        }
+    }
+    &__link {
+        margin: 0 auto;
+    }
+}
+
 
 
 
