@@ -564,9 +564,34 @@
         &:hover {
             color: $accent;
         }
-    }
+    }  
+}
 
-    
+
+
+
+/* 
+Privacy 
+*/
+
+.privacy {
+    &__inner {
+        color: $title;
+    }
+    &__info {
+        margin-bottom: 30px;
+    }
+    &__title {
+        font-size: 20px;
+        @extend %mont-500;
+        margin-bottom: 15px;
+    }
+    &__box {
+        margin-bottom: 30px;
+    }
+    &__item {
+        margin-bottom: 10px;
+    }
 }
 
 
