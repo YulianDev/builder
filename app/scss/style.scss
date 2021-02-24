@@ -586,11 +586,141 @@ Privacy
         @extend %mont-500;
         margin-bottom: 15px;
     }
-    &__box {
+    ul.privacy__list {
         margin-bottom: 30px;
     }
     &__item {
+        padding-left: 15px;
         margin-bottom: 10px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            transform: rotate(45deg);
+            background-color: $title;
+        }
+    }
+    ul.privacy__sublist {
+        padding: 10px 0 0 30px;
+    }
+    &__subitem {
+        padding-left: 15px;
+        margin-bottom: 10px;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: $title;
+        }
+    }
+    &__link {
+        color: $accent;
+        cursor: pointer;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+        /*
+        Services
+        */
+
+.categories {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        max-width: 370px;
+        width: 100%;
+        margin: 0 15px 30px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        display: flex;
+        flex-direction: column;
+        &:hover .categories__img-link{
+            opacity: .6;
+        }
+    }
+    &__img-box {
+        width: 100%;
+        height: 250px;
+        position: relative;
+    }
+    &__img {
+        width: 370px;
+        height: 250px;
+        object-fit: cover;
+    }
+    &__img-link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: $title;
+        opacity: 0;
+        transition: all .5s;
+    }
+    &__descr-box {
+        padding: 55px 60px;
+        height: 100%;
+    }
+    &__title {
+        text-align: center;
+        padding-bottom: 30px;
+        margin-bottom: 25px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            width: 50px;
+            background-color: $accent;
+        }
+    }
+    &__link {
+        @extend %mont-700;
+        font-size: 20px;
+        color: $title;
+        cursor: pointer;
+        transition: all .4s;
+        &:hover {
+            color: $accent;
+        }
+    }
+    &__text {
+        color: #5c6f87;
+        text-align: center;
+    }
+}
+
+
+
+
+/*
+ceiling
+*/
+
+.ceiling {
+    &__cards, 
+    &__pricing,
+    &__work-type {
+        margin-bottom: 60px;
     }
 }
 
@@ -604,4 +734,80 @@ Privacy
 
 
 
+
+
+
+.card {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__item {
+      width: 370px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+      margin: 0 15px 30px;
+      &:hover .card__title{
+        color: $accent;
+      }
+    }
+    &__link {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      
+    }
+    &__img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    &__title {
+      color: $title;
+      text-align: center;
+      padding: 25px;
+      font-size: 17px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .4s;
+    }
+  }
+
+  .pricing {
+    color: $title;
+      &__title {
+          @extend %mont-700;
+          font-size: 30px;
+          margin-bottom: 30px;
+      }
+      &__text {
+          margin-bottom: 20px;
+      }
+      ul.pricing__list{
+          margin:0 0 20px 20px;
+      }
+      &__item {
+          @extend %list-item;
+      }
+      
+  }
+
+  .work-type {
+    color: $title;
+    &__title{
+        @extend %mont-700;
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        @extend %mont-500;
+        color: $accent;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    &__item {
+        margin-bottom: 25px;
+    }
+  }
 @import 'media';

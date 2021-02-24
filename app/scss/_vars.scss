@@ -32,3 +32,19 @@ $accent: #0ac77599;
     @extend %mont-700;
     cursor: pointer;
 }
+
+%list-item {
+    margin-bottom: 10px;
+          padding-left: 15px;
+          position: relative;
+          &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 10px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color: $accent;
+          }
+}
