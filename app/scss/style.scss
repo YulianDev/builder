@@ -810,4 +810,60 @@ ceiling
         margin-bottom: 25px;
     }
   }
+
+  .module {
+      color: $title;
+      &__main-title {
+          @extend %mont-700;
+          font-size: 40px;
+          text-align: center;
+          margin-bottom: 70px;
+      }
+      &__content-box {
+          margin-bottom: 60px;
+          &:last-child {
+              margin-bottom: 0;
+          }
+      }
+      &__title {
+          @extend %mont-700;
+          font-size: 30px;
+          margin-bottom: 30px;
+      }
+      &__img {
+        float: right;
+        height: 240px;
+        width: 400px;
+      }
+      &__text {
+          margin-bottom: 20px;
+      }
+      ul.module__list {
+          margin:0 0 20px 20px;
+      }
+      &__list-title {
+          margin-bottom: 15px;
+      }
+      &__item {
+          @extend %list-item;
+      }
+      &__price-box {
+          margin-top: 30px;
+      }
+  }
+
+  .price-box {
+      &__list {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      &__item {
+          max-width: calc(100% / 2);
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          padding: 0 15px 15px;
+      }
+  }
 @import 'media';
