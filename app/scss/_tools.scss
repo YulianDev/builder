@@ -1,24 +1,108 @@
-.slick-arrow {
-    font-size: 0;
-    border: none;
-    background-color: transparent;
-    width: 20px;
-    height: 20px;
-    background-image: url('../images/icons/arrow-icon.svg');
-    cursor: pointer;
-    outline: transparent;
-    position: absolute;
-    z-index: 1;
-    opacity: .2;
-    transition: all .7s;
+
+.reasons__portfolio {
+    .slick-arrow {
+        font-size: 0;
+        border: none;
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        background-image: url('../images/icons/arrow-icon.svg');
+        cursor: pointer;
+        outline: transparent;
+        position: absolute;
+        z-index: 1;
+        opacity: .2;
+        transition: all .7s;
+    }
+    
+    .slick-prev {
+        transform: rotate(180deg);
+        top: 42%;
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+        bottom: 52%;
+    }
 }
 
-.slick-prev {
-    transform: rotate(180deg);
-    top: 42%;
-    left: 5px;
+
+.module {
+    &__slider {
+        width: 450px;
+        height: 340px;
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    &__slider-img {
+        height: 340px;
+        margin: 0 auto;
+        object-fit: cover;
+    }
+    .slick-arrow {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 0;
+        border: none;
+        outline: transparent;
+        background-color: #fff;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    .slick-next,
+    .slick-prev {
+        cursor: pointer;
+        transition: all .4s;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            background-image: url('../images/icons/slick-arrow.svg');
+            background-repeat: no-repeat;
+            top: 18px;
+            transition: all .4s;
+        }
+        &:hover {
+            background-color: $title;
+            &::before {
+                background-image: url('../images/icons/slick-arrow-hover.svg');
+            background-repeat: no-repeat;
+            }
+        }
+    }
+    .slick-next {
+        right: -30px;
+        &::before {
+            left: 10px;
+        }
+        &:hover{
+            right: 8px;
+            &::before {
+                left: 22px;
+            }
+        }
+    }
+    .slick-prev {
+        left: -30px;
+        &::before {
+            right: 10px;
+            transform: rotate(180deg);
+        }
+        &:hover{
+            left: 8px;
+            
+            &::before {
+                right: 22px;
+            }
+        }
+    }
 }
-.slick-next {
-    right: 5px;
-    bottom: 52%;
+
+.portfolio__filter-btn .mixitup-control-active {
+    border-bottom: 1px solid #0ac77599;
+    color: $accent;
 }
