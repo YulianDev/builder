@@ -1,0 +1,231 @@
+@media (max-width: 1000px) {
+
+    /* Index */
+
+
+    .logo, 
+    .menu__btn {
+        position: relative;
+        z-index: 1;
+    }
+    .menu {
+        &__btn {
+            display: block;
+            padding: 5px 10px;
+        }
+        &__list {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 75px;
+            background-color: $title;
+            display: block; 
+            text-align: center;
+            transform: translateY(-500%);
+            transition: all .7s;
+        }
+        &__list.menu__list--active {
+            transform: translateY(0%);
+        }
+        &__link {
+            display: block;
+            padding: 15px 0;
+        }
+        &__item + .menu__item {
+            margin-left: 0;
+        }
+    }
+    .about {
+        &__item::after {
+            display: none;
+        }
+        ul.about__list--continue {
+            width: 100%;
+        }
+    }
+
+    .advantages {
+        &__inner {
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        &__box {
+            margin-bottom: 60px;
+            &:last-child {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .team {
+        &__inner {
+            flex-direction: column;
+        }
+        &__header {
+            min-height: 250px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .reasons {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__info {
+            max-width: 450px;
+            margin-bottom: 50px;
+        }
+    }
+
+    .services {
+        &__img {
+            display: none;
+        }
+        ul.services__list {
+            margin: 0 auto;
+        }
+        &__item {
+            justify-content: flex-end;
+        }
+    }
+
+    .price {
+        ul.price__list {
+            display: block;
+        }
+        &__item {
+            margin: 0 auto;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+        }
+        &__item-title {
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    section {
+        padding: 80px 0;
+    }
+
+    .about {
+        &__title {
+            margin-bottom: 60px;
+        }
+        ul.about__list,
+        ul.about__list--continue {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0;
+        }
+        &__item {
+            margin-bottom: 50px;
+        }
+        &__list--continue .about__item:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .advantages {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__box:last-child {
+            margin: 0;
+        }
+    }
+
+    .team {
+        &__info {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer {
+        padding: 80px 0;
+        &__inner {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__info,
+        &__contact {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        &__contact {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    section {
+        padding: 60px 0;
+    }
+    .title {
+        font-size: 28px;
+    }
+
+    .about {
+        &__descr {
+            font-size: 20px;
+        }
+    }
+
+    .advantages {
+        &__descr {
+            height: auto;
+        }
+    }
+
+    .team {
+        &__name {
+            font-size: 25px;
+        }
+    }
+
+    .reasons {
+        &__portfolio {
+            display: none;
+        }
+    }
+
+    .services {
+        &__item {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item-box {
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .connection {
+        &__submit-box {
+            flex-direction: column;
+        }
+        &__btn {
+            margin-bottom: 20px;
+        }
+    }
+}
+

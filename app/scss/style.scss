@@ -54,6 +54,17 @@
 }
 
 .menu {
+    &__btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        display: none;
+    }
+    &__btn-img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
     &__list {
         display: flex;
     }
@@ -91,6 +102,9 @@
             right: -180px;
             top: 50%;
             transform: translateY(-50%);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
         }
         &:nth-child(2)::after {
             background-image: url('../images/icons/arrow-top.png');
@@ -99,7 +113,7 @@
             background-image: url('../images/icons/arrow-bottom.png');
             bottom: -101px;
             top: auto;
-            right: 47px;
+            right: -5px;
             transform: rotate(135deg);
         }
     }
@@ -188,7 +202,7 @@
     }
     &__header {
         max-width: 500px;
-        height: 400px;
+        min-height: 400px;
         display: flex;
         flex-direction: column;
         justify-content:space-around;
@@ -942,6 +956,108 @@ ceiling
         width: 550px;
         height: 400px;
         object-fit: cover;
+      }
+  }
+
+  .contact {
+      color: $title;
+      padding-bottom: 0;
+      &__info {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 50px;
+      }
+      &__info-item {
+          max-width: 300px;
+          width: 100%;
+          padding: 0 15px;
+      }
+      &__info-box {
+          padding-left: 60px;
+          position: relative;
+          &::before{
+              content: '';
+              position: absolute;
+              width: 50px;
+              height: 50px;
+              left: 0;
+              top: -10px;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+      }
+      &__info-phone::before {
+          background-image: url('../images/icons/smartphone-icon.svg');
+      }
+      &__info-address::before {
+          background-image: url('../images/icons/address-icon.svg');
+      }
+      &__info-mail::before {
+          background-image: url('../images/icons/email-icon.svg');
+      }
+      &__info-hour::before {
+          background-image: url('../images/icons/clock-icon.svg');
+      }
+      &__title {
+          @extend %mont-700;
+          font-size: 20px;
+          margin-bottom: 15px;
+      }
+      &__text {
+          color: #5c6f87;
+          line-height: 30px;
+      }
+      &__bottom-box {
+          width: 100%;
+          display: flex;
+          background-color: #f8f8f9;
+      }
+      &__connection {
+        width: calc(100% / 2);
+        display: flex;
+        justify-content: center;
+      }
+      &__form {
+          margin-top: 150px;
+          color: $title;
+          width: 400px;
+      }
+      &__box {
+          position: relative;
+          &::after {
+              content: '';
+              position: absolute;
+              top: 17px;
+              right: 5px;
+              width: 14px;
+              height: 14px;
+              background-repeat: no-repeat;
+              background-position: center center;
+          }
+      }
+      &__user::after {
+          background-image: url('../images/icons/man-user-icon.svg');
+      }
+      &__phone::after {
+        background-image: url('../images/icons/phone-icon-3.svg');
+      }
+      &__text::after {
+        background-image: url('../images/icons/pen-icon.svg');
+      }
+      &__input,
+      &__textarea {
+          width: 100%;
+          padding: 10px 30px 10px 0;
+          border: none;
+          margin-bottom: 30px;
+          border-bottom: 1px solid #000;
+          background-color: transparent;
+          outline: transparent;
+      }
+      &__textarea {
+          height: 200px;
+          resize: none;
       }
   }
 @import 'media';
