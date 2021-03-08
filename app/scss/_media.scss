@@ -1,12 +1,59 @@
+
+@media (max-width: 1250px) {
+    .card {
+        &__list {
+            justify-content: center;
+        }
+    }
+    .categories {
+        &__list {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 1160px) {
+    .portfolio {
+        &__filter-btn {
+            flex-wrap: wrap;
+        }
+        &__img {
+            width: 450px;
+            height: 320px; 
+        }
+    }
+}
+
 @media (max-width: 1000px) {
 
     /* Index */
 
+    .header-bottom {
+        position: relative;
+        z-index: 3;
+        opacity: 0.9;
+    }
+
+    section {
+        padding: 120px 0;
+    }
 
     .logo, 
     .menu__btn {
         position: relative;
         z-index: 1;
+    }
+
+    .breadcrumbs {
+        &__title {
+            font-size: 48px;
+        }
+        &__link {
+            font-size: 18px;
+        }
+        &__inner {
+            height: 350px;
+        }
     }
     .menu {
         &__btn {
@@ -17,7 +64,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            top: 75px;
+            top: 20px;
             background-color: $title;
             display: block; 
             text-align: center;
@@ -104,6 +151,61 @@
             text-align: center;
         }
     }
+
+    .module {
+        &__img {
+            width: 330px;
+            height: 200px;
+        }
+        &__portfolio-inner {
+            flex-direction: column;
+            .module__text {
+                width: 100%;
+                margin-bottom: 45px;
+            }
+        }
+    }
+
+    .price-box {
+        &__item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    #map {
+        height: 700px;
+    }
+
+    .contact {
+        &__info-item {
+            margin-bottom: 25px;
+        }
+    }
+
+    .work-principles {
+        &__list {
+            display: block
+        }
+        &__item {
+            margin: 50px 20px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .portfolio {
+        &__title {
+            margin-bottom: 40px;
+        }
+        &__btn {
+            margin-bottom: 10px;
+        }
+        &__img {
+            width: 340px;
+            height: 250px;
+        }
+    }
 }
 
 @media (max-width: 750px) {
@@ -153,6 +255,18 @@
         }
     }
 
+    .module {
+        &__img {
+            display: none;
+        }
+    }
+
+    .price-box {
+        &__item {
+            margin-bottom: 20px;
+        }
+    }
+
     .footer {
         padding: 80px 0;
         &__inner {
@@ -172,10 +286,45 @@
             margin-bottom: 50px;
         }
     }
+
+    #map {
+        height: 550px;
+        width: 100%;
+    }
+
+    .contact {
+        &__bottom-box {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__form {
+            margin: 70px 0;
+        }
+        &__btn {
+            margin: 0 auto;
+        }
+    }
+
+    .portfolio {
+        &__btn {
+            font-size: 16px;
+        }
+        &__filter-btn {
+            margin-bottom: 40px;
+        }
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+        &__item {
+            margin-bottom: 20px;
+        }
+    }
 }
 
-@media (max-width: 750px) {
-    section {
+@media (max-width: 650px) {
+    section,
+    .footer {
         padding: 60px 0;
     }
     .title {
@@ -194,6 +343,19 @@
         }
     }
 
+    .breadcrumbs {
+        &__list {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__item {
+            padding-right: 15px;   
+        }
+    }
+
+    .breadcrumbs__item+.breadcrumbs__item {
+        margin-left: 5px;
+    }
     .team {
         &__name {
             font-size: 25px;
@@ -220,11 +382,97 @@
     }
 
     .connection {
+        &__title {
+            margin-bottom: 30px;
+        }
         &__submit-box {
             flex-direction: column;
         }
         &__btn {
             margin-bottom: 20px;
+        }
+    }
+
+    .module {
+        &__main-title {
+            font-size: 28px;
+            margin-bottom: 40px;
+        }
+        &__title {
+            font-size: 24px;
+        }
+    }
+
+    .price-box {
+        &__item {
+            justify-content: flex-start;
+        }
+    }
+
+    .pricing {
+        &__title {
+            font-size: 24px;
+        }
+    }   
+
+    .portfolio {
+        &__title {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+@media (max-width: 530px) {
+    .breadcrumbs {
+        &__inner {
+            height: 300px;
+        }
+        &__link {
+            font-size: 16px;
+        }
+    }
+
+    .module {
+        &__slider {
+            display: none;
+        }
+        &__portfolio-inner .module__text {
+            margin-bottom: 0;
+        }
+    }
+    .card {
+        &__title {
+            padding: 15px;
+        }
+    }
+    .portfolio {
+        &__btn {
+            font-size: 14px;
+        }
+        &__filter-btn {
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+    }
+    .categories {
+        &__item {
+            width: 280px;
+        }
+        &__descr-box {
+            padding: 20px 25px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .breadcrumbs {
+        &__title {
+            font-size: 23px;
+        }
+    }
+    .categories {
+        &__img-box {
+            display: none;
         }
     }
 }

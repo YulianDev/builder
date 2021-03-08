@@ -79,6 +79,9 @@
             color: $accent;
         }
     }
+    &__link--active {
+        color: $accent;
+    }
 }
 
 .about {
@@ -738,19 +741,6 @@ ceiling
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card {
     &__list {
       display: flex;
@@ -966,6 +956,7 @@ ceiling
           display: flex;
           justify-content: space-between;
           align-items: flex-start;
+          flex-wrap: wrap;
           margin-bottom: 50px;
       }
       &__info-item {
@@ -1022,6 +1013,7 @@ ceiling
           margin-top: 150px;
           color: $title;
           width: 400px;
+          padding: 0 20px;
       }
       &__box {
           position: relative;
