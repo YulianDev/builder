@@ -1,0 +1,50 @@
+$default: #fff;
+$title: #141d28;
+$accent: #0ac77599;
+%mont-700 {
+    font-family: 'Montserrat-Bold', sans-serif;
+    font-weight: 700;
+}
+%mont-500 {
+    font-family: 'Montserrat-Medium', sans-serif;
+    font-weight: 500;
+}
+%mont-400 {
+    font-family: 'Montserrat-Regular', sans-serif;
+    font-weight: 400;
+}
+%pop-300 {
+    font-family: 'Poppins-Light', sans-serif;
+    font-weight: 300;
+}
+%pop-400 {
+    font-family: 'Poppins-Regular', sans-serif;
+    font-weight: 400;
+}
+%btn {
+    color: $title;
+    border: 2px solid $accent;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend %mont-700;
+    cursor: pointer;
+}
+
+%list-item {
+    margin-bottom: 10px;
+          padding-left: 15px;
+          position: relative;
+          &::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 10px;
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background-color: $accent;
+          }
+}
