@@ -123,3 +123,36 @@ section {
         }
 }
 
+.lock {
+  overflow: hidden;
+}
+
+.scroll-top {
+  &__link {
+    display: none;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    right: 40px;
+    z-index: 100;
+    cursor: pointer;
+    background-image: url('../images/icons/arrow-top-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .4;
+    transition: opacity .4s;
+  }
+  &__link--hover {
+    &:hover {
+      opacity: 1;
+    }
+  }
+  &__link--focus {
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
