@@ -26,13 +26,11 @@
 
 @media (max-width: 1000px) {
 
-    /* Index */
-
     .header-bottom {
-        position: relative;
-        z-index: 3;
-        opacity: 0.9;
+        padding: 10px 0;
     }
+
+    /* Index */
 
     section {
         padding: 120px 0;
@@ -56,23 +54,68 @@
         }
     }
     .menu {
-        &__btn {
+        &__icon {
             display: block;
-            padding: 5px 10px;
+            z-index: 5;
+            position: relative;
+            cursor: pointer;
+            width: 30px;
+            height: 18px;
+            margin-right: 15px;
+            &::before,
+            &::after, 
+            & span {
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all .3s;
+                background-color: #fff;
+            }
+            &::before,
+            &::after {
+                content: '';
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                bottom: 0;
+            }
+            & span {
+                top: 50%;
+                transform: scale(1) translateY(-50%);
+            }
+        } 
+        &__icon--active {
+            span {
+                transform: scale(0);
+            }
+            &::before {
+                top: 50%;
+                transform: rotate(-45deg) translateY(-50%);
+            }
+            &::after {
+                bottom: 50%;
+                transform: rotate(45deg) translateY(50%);
+            }
         }
         &__list {
             position: absolute;
             left: 0;
             right: 0;
-            top: 20px;
+            top: 129px;
             background-color: $title;
             display: block; 
             text-align: center;
             transform: translateY(-500%);
             transition: all .7s;
+            opacity: 0;
         }
         &__list.menu__list--active {
             transform: translateY(0%);
+            z-index: 10;
+            opacity: 1;
         }
         &__link {
             display: block;
@@ -213,6 +256,11 @@
         padding: 80px 0;
     }
 
+    .scroll-top__link {
+        right: 30px;
+        bottom: 30px;
+    }
+
     .about {
         &__title {
             margin-bottom: 60px;
@@ -319,7 +367,7 @@
         &__item {
             margin-bottom: 20px;
         }
-    }
+    }   
 }
 
 @media (max-width: 650px) {
@@ -430,6 +478,11 @@
         &__link {
             font-size: 16px;
         }
+    }
+
+    .scroll-top__link {
+        right: 22px;
+        bottom: 22px;
     }
 
     .module {

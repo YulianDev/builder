@@ -19,8 +19,7 @@
 }
 .header-top,
 .header-bottom {
-    background-color: $title;
-    opacity: 0.8;
+    background-color: rgba(20, 29, 40, 0.8);
 }
 
 .header-top {
@@ -53,17 +52,28 @@
     }
 }
 
-.menu {
-    &__btn {
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-        display: none;
+.header-bottom--active {
+    position: fixed;
+    top: -100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: rgb(20, 29, 40);
+    animation: appearance .5s forwards;
+    .menu__list--active {
+        top: 70px;
     }
-    &__btn-img {
-        width: 30px;
-        height: 30px;
-        object-fit: cover;
+}
+
+.header-bottom--disappearance {
+    animation: disappearance .4s forwards;
+}
+
+
+.menu {
+    &__icon {
+        display: none;
     }
     &__list {
         display: flex;
@@ -1050,6 +1060,26 @@ ceiling
       &__textarea {
           height: 200px;
           resize: none;
+      }
+  }
+
+  @keyframes appearance {
+      0% {
+          top: -100%;
+      }
+
+      100% {
+          top: 0;
+      }
+  }
+
+  @keyframes disappearance {
+      0% {
+          top: 0;
+      }
+
+      100% {
+          top: -100;
       }
   }
 @import 'media';
